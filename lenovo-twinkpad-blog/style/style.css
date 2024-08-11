@@ -1,0 +1,8 @@
+#content img {
+    max-width: 80%;
+}
+
+.image-caption {
+    border-style: double;
+    border-color: purple;
+}
