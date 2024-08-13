@@ -7,7 +7,7 @@ on:
       - main
 
 concurrency: # prevent concurrent deploys doing strange things
-  group: neocities-love-and-purpose
+  group: deploy-to-neocities
   cancel-in-progress: true
 
 jobs:
@@ -32,4 +32,4 @@ jobs:
       with:
         api_token: ${{ secrets.NEOCITIES_API_TOKEN }}
         cleanup: false
-        dist_dir: public
+        dist_dir: dist
