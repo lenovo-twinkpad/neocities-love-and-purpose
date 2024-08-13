@@ -18,6 +18,15 @@ let blogName = "lenovo twinkpad";
 let authorName = "julian";
 let authorLink = ""; // Enter your website, social media, etc. Some way for people to tell you they like your blog! (Leaving it empty is okay too)
 
+const date = new Date();
+
+let day = date.getDate();
+let month = date.getMonth() + 1;
+let year = date.getFullYear();
+
+// This arrangement can be altered based on how we want the date's format to appear.
+let currentDate = `${day}-${month}-${year}`;
+
 //-----------------------------
 
 //==[ 2. POSTS ARRAY ]==
@@ -57,6 +66,10 @@ const postDateFormat = /\d{4}\-\d{2}\-\d{2}\-/;
 let relativePath = ".";
 if ( url.includes("posts/") ) {
   relativePath = "..";
+}
+//If on home page of website (not blog) navigate to the blog home as base for links
+if ( url.indexOf("lenovo-twinkpad/") <= 1) {
+  relativePath = "/lenovo-twinkpad-blog";
 }
 
 //Generate the Header HTML, a series of list items containing links.
@@ -138,9 +151,9 @@ function formatPostLink(i) {
     }
   }
   if (  postDateFormat.test ( postsArray[i][0].slice( 6,17 ) ) ) {
-    return '<li><a href="' + relativePath + '/'+ postsArray[i][0] +'">' + postsArray[i][0].slice(6,16) + " \u00BB " + postTitle_i + '</a></li>';
+    return '<li><a href="' + relativePath + '/'+ postsArray[i][0] +'"><div class="post-title-container"><div class="post-title">* ' + postTitle_i + '</div><div class="post-date">' + postsArray[i][0].slice(6,16) + '</div></div></a></li>';
   } else {
-    return '<li><a href="' + relativePath + '/'+ postsArray[i][0] +'">' + postTitle_i + '</a></li>';
+    return '<li><a href="' + relativePath + '/'+ postsArray[i][0] +'"><div class="post-title-container"><div class="post-title">* ' + postTitle_i + '</div><div class="post-date">no date</div></div></a></li>';
   }
 }
 
@@ -152,7 +165,7 @@ postListHTML += "</ul>";
 
 //Generate the Recent Post List HTML, which can be shown on the home page (or wherever you want!)
 let recentPostsCutoff = 3; //Hey YOU! Change this number to set how many recent posts to show before cutting it off with a "more posts" link.
-let recentPostListHTML = "<h2>Recent Posts:</h2><ul>";
+let recentPostListHTML = '<div class="card-heading-recent"><span>thank you for shopping at</span><br><h2>lenovo twinkpad</h2></div><div class="post-title-container service-details"><div class="served-by"><strong>Served by:</strong><br>Julian</div><div class="post-date"><strong>Date: </strong><br>'+ currentDate + '</div></div><hr><ul><li><div class="post-title-container headings"><div class="post-title">POST</div><div class="post-date">DATE</div></div></li>';
 let numberOfRecentPosts = Math.min( recentPostsCutoff, postsArray.length );
 for ( let i = 0; i < numberOfRecentPosts; i++ ) {
   recentPostListHTML += formatPostLink(i);
@@ -163,7 +176,7 @@ for ( let i = 0; i < numberOfRecentPosts; i++ ) {
 if ( postsArray.length > recentPostsCutoff ) {
   recentPostListHTML += '<li class="moreposts"><a href=' + relativePath + '/archive.html>\u00BB more posts</a></li></ul>';
 } else {
-  recentPostListHTML += "</ul>";
+  recentPostListHTML += '</ul><div class="moreposts">no more posts (yet)</div>';
 }
 
 //Generate the Next and Previous Post Links HTML

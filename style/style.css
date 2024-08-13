@@ -12,6 +12,11 @@
   src: url('LEDLIGHT.otf');
 }
 
+@font-face {
+  font-family: receipt;
+  src: url('Fake\ Receipt.otf');
+}
+
 body {
   background-color: white;
   color: black;
@@ -49,4 +54,54 @@ nav ul {
 
 nav li {
   flex: 1;
+}
+
+#recentpostlistdiv {
+  max-width: 400px;
+  background-color: #ffffff;
+  font-family: 'receipt';
+  font-size: 10pt;
+  text-align: center;
+}
+
+#recentpostlistdiv ul {
+  list-style: none;
+  padding-left: 0px;
+}
+
+#recentpostlistdiv h2 {
+  font-size: 20pt;
+  margin: 0px;
+}
+
+#recentpostlistdiv a, .service-details {
+  text-align: left;
+}
+
+#recentpostlistdiv hr {
+  margin-top: 0px;
+}
+
+.card-heading-recent {
+  padding: 10px 0px 20px 0px;
+}
+
+.moreposts {
+  text-align: center;
+  font-family: 'paskowsky';
+  font-size: 28pt;
+}
+
+.post-title-container {
+  display: flex;
+  padding: 0px 20px 10px 20px;
+}
+
+.post-title-container.headings{
+  font-weight: bolder;
+}
+
+.post-title,  .served-by {
+  padding-right: 40px;
+  margin-right: auto;
 }
