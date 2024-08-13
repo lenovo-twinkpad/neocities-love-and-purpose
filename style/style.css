@@ -56,12 +56,37 @@ nav li {
   flex: 1;
 }
 
-#recentpostlistdiv {
-  max-width: 400px;
+main {
+  display: flex;
+}
+
+.centre-content {
+  background-image: url('../images/textures/corkboard.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-width: 30px;
+  border-style: solid;
+  border-color: #5b9ee7;
+  border-image: url('../images/textures/blue-plywood.jpg');
+  border-image-repeat: round;
+  border-image-slice: 30;
+  box-shadow: inset 0px 0px 40px #060403, inset -1px -2px 2px #060403, 0px 0px 60px #0f0f0f;
+  margin:1em 2em;
+  padding:20px;
+  width:60%;
+  position: relative;
+  float: left;
+}
+
+.note {
+  max-width: 340px;
   background-color: #ffffff;
   font-family: 'receipt';
   font-size: 10pt;
   text-align: center;
+  position: relative;
+  transform: rotate(1deg);
+  padding-bottom: 2em;
 }
 
 #recentpostlistdiv ul {
@@ -70,11 +95,11 @@ nav li {
 }
 
 #recentpostlistdiv h2 {
-  font-size: 20pt;
+  font-size: 15pt;
   margin: 0px;
 }
 
-#recentpostlistdiv a, .service-details {
+.post-title, .service-details {
   text-align: left;
 }
 
@@ -82,8 +107,18 @@ nav li {
   margin-top: 0px;
 }
 
+.pin {
+  position: absolute;
+  top: -1em;
+  left: -0.5em;
+  width: 30px;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  margin: 0.5em;
+}
+
 .card-heading-recent {
-  padding: 10px 0px 20px 0px;
+  padding: 1em 0px 2em 0px;
 }
 
 .moreposts {
@@ -94,7 +129,7 @@ nav li {
 
 .post-title-container {
   display: flex;
-  padding: 0px 20px 10px 20px;
+  padding: 0px 3em 1em 3em;
 }
 
 .post-title-container.headings{
@@ -104,4 +139,22 @@ nav li {
 .post-title,  .served-by {
   padding-right: 40px;
   margin-right: auto;
+}
+
+#matchbox {
+  position: absolute;
+  bottom: 1px;
+  right: 5px;
+  height: 70px;
+}
+
+#window-seat {
+  position: absolute;
+  top: 32px;
+  right: 20px;
+  height: 250px;
+}
+
+#window-seat:hover {
+  transform: rotate(5deg);
 }
