@@ -19,7 +19,6 @@ jobs:
     - uses: actions/checkout@v4
     # Set up any tools and build steps here
     # This example uses a Node.js toolchain to build a site
-    - name: Setup Node.js environment
     - uses: actions/setup-node@v4.0.3
       with:
         node-version: lts/*
