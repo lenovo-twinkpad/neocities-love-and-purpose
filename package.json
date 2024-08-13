@@ -1,0 +1,19 @@
+{
+  "name": "neocities-love-and-purpose",
+  "description": "",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "npm run clean && run-p build:*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lenovo-twinkpad/neocities-love-and-purpose.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lenovo-twinkpad/neocities-love-and-purpose/issues"
+  },
+  "homepage": "https://github.com/lenovo-twinkpad/neocities-love-and-purpose"
+}
