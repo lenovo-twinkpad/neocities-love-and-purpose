@@ -14,14 +14,8 @@
     "pony-cause": "^2.1.4",
     "webassert": "3.0.2"
   },
-  "devDependencies": {
-    "top-bun": "^8.0.0",
-    "auto-changelog": "^2.0.0",
-    "dependency-check": "^4.1.0",
-    "gh-release": "^7.0.0",
-    "npm-run-all2": "^6.0.0",
-    "standard": "^17.0.0",
-    "esbuild": "^0.23.0"
+  "engines": {
+    "node": "20.16"
   },
   "repository": {
     "type": "git",
