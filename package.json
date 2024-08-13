@@ -3,7 +3,8 @@
   "description": "",
   "version": "1.0.0",
   "scripts": {
-    "build": "npm run clean && run-p build:*"
+    "build": "npm run clean && run-p build:*",
+    "clean": "rm -rf public && mkdir -p public"
   },
   "repository": {
     "type": "git",
