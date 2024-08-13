@@ -7,7 +7,7 @@ on:
       - main
 
 concurrency: # prevent concurrent deploys doing strange things
-  group: deploy-to-neocities
+  group: neocities-love-and-purpose
   cancel-in-progress: true
 
 jobs:
