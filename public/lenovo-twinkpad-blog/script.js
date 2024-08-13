@@ -43,7 +43,8 @@ let postsArray = [
 //[ "posts/2020-11-10-Special-Characters-Example.html", encodeURI( 'Spéci@l "Character\'s" Examp|e' ) ],
 //[ "posts/2020-11-10-My-Third-Post-Example.html" ],
 //[ "posts/2020-11-10-My-Second-Post-Example.html" ],
-[ "posts/2024-08-11-whats-in-a-name.html", encodeURI( 'what\'s in a name' ) ] ];
+[ "posts/2024-08-11-whats-in-a-name.html", encodeURI( 'what\'s in a name' ) ],
+[ "posts/2024-08-14-trouble-in-mini-displayport-aradise", encodeURI('trouble in mini displayport-aradise')] ];
 
 //XXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
