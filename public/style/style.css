@@ -212,3 +212,32 @@ main {
   color: indigo;
   padding: 0.4em 0.7em;
 }
+
+.pet {
+  position: absolute;
+  top: 20px;
+  right: 70px;
+}
+
+.pet > span {
+  visibility: hidden;
+  padding: 0.25em 0.5em;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 0.25em;
+  white-space: nowrap;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  left: -50px;
+  transition-property: visibility;
+  transition-delay: 0s;
+}
+
+.pet:hover > span {
+  visibility: visible;
+  transition-delay: 0.3s;
+}
