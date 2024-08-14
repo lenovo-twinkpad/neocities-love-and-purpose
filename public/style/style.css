@@ -17,6 +17,11 @@
   src: url('Fake\ Receipt.otf');
 }
 
+@font-face {
+  font-family: digital;
+  src: url('digital-7.ttf');
+}
+
 body {
   background-color: white;
   color: black;
@@ -213,13 +218,47 @@ main {
   padding: 0.4em 0.7em;
 }
 
-.pet {
+.pets {
+  background-image: url('../images/backgrounds/pink-noise.gif');
   position: absolute;
   top: 20px;
-  right: 70px;
+  right: 20px;
+  text-align: center;
+}
+
+.pets > h2 {
+  font-family: digital;
+  letter-spacing: 0.5rem;
+  margin: 0.5em;
+  padding: 0.2em 0.5em;
+  background-color: white;
+}
+
+.pets-flex {
+  display: flex;
+  padding: 1em;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.pets-flex img {
+  padding: 0em 1em;
+}
+
+.pets-flex > * > span {
+  position: absolute;
+  top: 160px;
 }
 
 .pet > span {
+  right: 140px;
+}
+
+.pet2 > span {
+  right: -10px;
+}
+
+.pet > span, .pet2 > span {
   visibility: hidden;
   padding: 0.25em 0.5em;
   background-color: black;
@@ -227,17 +266,21 @@ main {
   text-align: center;
   border-radius: 0.25em;
   white-space: nowrap;
+}
 
+.pet > span {
   /* Position the tooltip */
-  position: absolute;
-  z-index: 1;
-  top: 100%;
-  left: -50px;
   transition-property: visibility;
   transition-delay: 0s;
 }
 
-.pet:hover > span {
+.pet2 > span {
+  /* Position the tooltip */
+  transition-property: visibility;
+  transition-delay: 0s;
+}
+
+.pet:hover > span, .pet2:hover > span {
   visibility: visible;
   transition-delay: 0.3s;
 }
