@@ -1,3 +1,8 @@
+@font-face {
+    font-family: hattenschweiler;
+    src: url('../../style/HATTEN.TTF');
+  }
+
 #content img {
     max-width: 80%;
 }
@@ -5,4 +10,8 @@
 .image-caption {
     border-style: double;
     border-color: purple;
+}
+
+h1 {
+    font-family: 'hattenschweiler';
 }

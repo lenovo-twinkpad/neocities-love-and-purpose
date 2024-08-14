@@ -44,7 +44,7 @@ let postsArray = [
 //[ "posts/2020-11-10-My-Third-Post-Example.html" ],
 //[ "posts/2020-11-10-My-Second-Post-Example.html" ],
 [ "posts/2024-08-11-whats-in-a-name.html", encodeURI( 'what\'s in a name' ) ],
-[ "posts/2024-08-14-trouble-in-mini-displayport-aradise", encodeURI('trouble in mini displayport-aradise')] ];
+[ "posts/2024-08-14-trouble-in-mini-displayport-aradise.html", encodeURI('trouble in mini displayport-aradise')] ];
 
 //XXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
@@ -166,7 +166,7 @@ postListHTML += "</ul>";
 
 //Generate the Recent Post List HTML, which can be shown on the home page (or wherever you want!)
 let recentPostsCutoff = 3; //Hey YOU! Change this number to set how many recent posts to show before cutting it off with a "more posts" link.
-let recentPostListHTML = '<div class="card-heading-recent"><span>thank you for shopping at</span><br><a href="' + relativePath + '"><h2>lenovo twinkpad</h2></a></div><div class="post-title-container service-details"><div class="served-by"><strong>Served by:</strong><br>Julian</div><div class="post-date"><strong>Date: </strong><br>'+ currentDate + '</div></div><hr><ul><li><div class="post-title-container headings"><div class="post-title">POST</div><div class="post-date">DATE</div></div></li>';
+let recentPostListHTML = '<div class="card-heading-recent"><span>thank you for shopping at</span><br><a href="' + relativePath + '/index.html"><h2>lenovo twinkpad</h2></a></div><div class="post-title-container service-details"><div class="served-by"><strong>Served by:</strong><br>Julian</div><div class="post-date"><strong>Date: </strong><br>'+ currentDate + '</div></div><hr><ul><li><div class="post-title-container headings"><div class="post-title">POST</div><div class="post-date">DATE</div></div></li>';
 let numberOfRecentPosts = Math.min( recentPostsCutoff, postsArray.length );
 for ( let i = 0; i < numberOfRecentPosts; i++ ) {
   recentPostListHTML += formatPostLink(i);

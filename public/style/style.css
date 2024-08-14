@@ -27,7 +27,6 @@ header {
   text-align: center;
   color: #2a2a2a;
   background-color: #e7e7e7;
-  max-width: 600px;
   margin: 0 auto;
   font-family: 'ledlight';
   font-size: 26pt;
@@ -35,6 +34,10 @@ header {
 
 header h1 {
   margin: 0 5%;
+}
+
+header, .thoughts {
+  max-width: 600px;
 }
 
 nav {
@@ -71,11 +74,15 @@ main {
   border-image-repeat: round;
   border-image-slice: 30;
   box-shadow: inset 0px 0px 40px #060403, inset -1px -2px 2px #060403, 0px 0px 60px #0f0f0f;
-  margin:1em 2em;
+  margin: 0 2em;
   padding:20px;
   width:60%;
   position: relative;
   float: left;
+}
+
+main {
+  margin-top: 1em;
 }
 
 .note {
@@ -157,4 +164,51 @@ main {
 
 #window-seat:hover {
   transform: rotate(5deg);
+}
+
+.badges img {
+  width: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0.5em;
+}
+
+#thoughts:hover {
+  transform: rotate(5deg);
+}
+
+.thoughts {
+  min-width: 600px;
+  margin: 0 auto;
+  font-weight: bold;
+  color: lavenderblush;
+}
+
+.thoughts-entry {
+  color: white;
+  display: flex;
+}
+
+.thoughts-entry.content {
+  font-weight: normal;
+  background-color:hsla(0, 0%, 0%, 0.572);
+  border-color: #aa75ff;
+  border-width: 2px;
+  border-style: outset;
+}
+
+.thoughts-entry p {
+  margin: 0.5em 0;
+}
+
+.thoughts-entry > .date {
+  margin-right: 1em;
+  min-width: 80px;
+}
+
+.homelink {
+  background-color: lavender;
+  color: indigo;
+  padding: 0.4em 0.7em;
 }
